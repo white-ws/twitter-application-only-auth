@@ -33,4 +33,4 @@ def request_bearer_token(client_credentials):
 	if response.status_code != requests.codes.ok:
 		raise Exception('Invalid credentials')
 
-	return response.json().get('access_token');
+	return response.json().get('access_token')
