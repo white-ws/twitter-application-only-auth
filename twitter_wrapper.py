@@ -1,4 +1,4 @@
-from twitter_oauth.app_only import AppOnlyAuth
+from auth.oauth2 import AppOnlyAuth
 import os
 import requests
 

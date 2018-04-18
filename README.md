@@ -1,6 +1,6 @@
 # Twitter Application-Only Authentication For Python
 
-A simple implementation of Twitter's Application-Only Authentication in Python, along side with a Twitter API Wrapper for searching newest tweet from an account.
+A simple implementation of Twitter's Application-Only Authentication (OAuth2 with Client Credentials) in Python, along side with a Twitter API Wrapper for searching newest tweet from an account.
 
 Tested with Python 3.6.0
 
