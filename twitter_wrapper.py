@@ -6,12 +6,11 @@ API_TWEET_SEARCH = 'https://api.twitter.com/1.1/search/tweets.json'
 
 class TwitterApi:
 	def __init__(self, consumer_key, consumer_secret):
-		auth = AppOnlyAuth(consumer_key, consumer_secret)
-		self.access_token = auth.get_access_token()
+		self.auth = AppOnlyAuth(consumer_key, consumer_secret)
 
 	def search_tweet_from_user(self, user):
 		headers = {
-			'Authorization': 'Bearer {}'.format(self.access_token)
+			'Authorization': self.auth.get_authorization()
 		}
 		params = {
 			'q': 'from:{}'.format(user),

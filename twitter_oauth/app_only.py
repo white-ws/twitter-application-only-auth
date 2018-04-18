@@ -12,9 +12,12 @@ class AppOnlyAuth():
 
 	def get_access_token(self):
 		client_credentials = get_encoded_credentials(self.consumer_key, self.consumer_secret)
-		access_token = request_bearer_token(client_credentials)		
+		access_token = request_bearer_token(client_credentials)
 
 		return access_token
+
+	def get_authorization(self):
+		return 'Bearer {}'.format(self.get_access_token())
 
 def get_encoded_credentials(consumer_key, consumer_secret):
 	bearer_token_credentials = "{}:{}".format(consumer_key, consumer_secret)
